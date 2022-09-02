@@ -2,6 +2,7 @@
 """
     Creating the base class for all other classes
 """
+import copy
 import uuid
 from datetime import datetime
 import models
