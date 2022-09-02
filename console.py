@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This is a module for HBNBCommand class.
+"""
 import cmd
 
 
@@ -13,7 +16,7 @@ class HBNBCommand(cmd.Cmd):
         """Quit command to exit the program"""
         return True
 
-    def emptyline(self) -> bool:
+    def emptyline(self):
         return False
 
 
