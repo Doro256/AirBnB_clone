@@ -55,7 +55,7 @@ class BaseModel:
            of __dict__ of the instance
         """
 
-        dict_ = self.__dict__
+        dict_ = copy.deepcopy(self.__dict__)
         dict_['__class__'] = self.__class__.__name__
         dict_['created_at'] = dict_['created_at'].isoformat()
         dict_['updated_at'] = dict_['updated_at'].isoformat()
