@@ -1,10 +1,17 @@
 #!/usr/bin/python3
-""" Serializes instances to a JSON file
+"""
+Serializes instances to a JSON file
 Deserializes JSON file to instances:
 """
 
 import json
 from models.base_model import BaseModel
+from models.amenity import Amenity
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.state import State
+from models.user import User
 
 
 class FileStorage():
@@ -28,7 +35,7 @@ class FileStorage():
 
         # create empty dictionary
         json_object = {}
-        # fill dictionary with elements __objects
+
         for key in self.__objects:
             json_object[key] = self.__objects[key].to_dict()
 
