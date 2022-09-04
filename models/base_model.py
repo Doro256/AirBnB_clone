@@ -2,7 +2,6 @@
 """
     Creating the base class for all other classes
 """
-import copy
 import uuid
 from datetime import datetime
 import models
@@ -56,7 +55,7 @@ class BaseModel:
            of __dict__ of the instance
         """
 
-        dict_ = copy.deepcopy(self.__dict__)
+        dict_ = self.__dict__.copy()
         dict_['__class__'] = self.__class__.__name__
         dict_['created_at'] = dict_['created_at'].isoformat()
         dict_['updated_at'] = dict_['updated_at'].isoformat()
