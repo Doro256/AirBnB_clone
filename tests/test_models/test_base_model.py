@@ -64,7 +64,7 @@ class TestBaseModel(unittest.TestCase):
         key with class name of the object and if updated_at and
         created_at are converted to string object in ISO format.
         '''
-        
+
         my_model3 = BaseModel()
         my_dict_model3 = my_model3.to_dict()
         self.assertIsInstance(my_dict_model3, dict)

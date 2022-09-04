@@ -14,7 +14,7 @@ class TestState(unittest.TestCase):
         test if funcions, methods, classes
         and modules have docstring
         '''
-        
+
         msj = "Modulo does not have docstring"
         self.assertIsNotNone(models.state.__doc__, msj)  # Modules
         msj = "Class does not have docstring"
@@ -23,7 +23,7 @@ class TestState(unittest.TestCase):
     def test_executable_file(self):
         '''test if file has permissions u+x to execute'''
         is_read_true = os.access('models/state.py', os.R_OK)
-        
+
         self.assertTrue(is_read_true)
 
         is_write_true = os.access('models/state.py', os.W_OK)
@@ -64,7 +64,7 @@ class TestState(unittest.TestCase):
         key with class name of the object and if updated_at and
         created_at are converted to string object in ISO format.
         '''
-        
+
         my_model3 = State()
         my_dict_model3 = my_model3.to_dict()
         self.assertIsInstance(my_dict_model3, dict)

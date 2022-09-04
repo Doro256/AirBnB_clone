@@ -98,7 +98,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, line):
         """
-        Prints all string representation of all instances based 
+        Prints all string representation of all instances based
         or not on the class name
         """
 
@@ -109,7 +109,7 @@ class HBNBCommand(cmd.Cmd):
             for key in dic:
                 representation_Class = str(dic[key])
                 listI.append(representation_Class)
-            
+
             print(listI)
             return
 

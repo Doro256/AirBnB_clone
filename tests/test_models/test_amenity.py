@@ -16,7 +16,7 @@ class TestAmenity(unittest.TestCase):
         test if funcions, methods, classes
         and modules have docstring
         '''
-        
+
         msj = "Módulo does not has docstring"
         self.assertIsNotNone(models.amenity.__doc__, msj)  # Modules
         msj = "Clase does not has docstring"
@@ -67,7 +67,7 @@ class TestAmenity(unittest.TestCase):
         key with class name of the object and if updated_at and
         created_at are converted to string object in ISO format.
         '''
-        
+
         my_model3 = Amenity()
         my_dict_model3 = my_model3.to_dict()
         self.assertIsInstance(my_dict_model3, dict)

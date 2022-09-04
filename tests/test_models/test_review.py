@@ -15,7 +15,6 @@ class TestReview(unittest.TestCase):
         and modules have docstring
         '''
 
-        
         msj = "Módulo does not has docstring"
         self.assertIsNotNone(models.review.__doc__, msj)  # Modules
         msj = "Clase does not has docstring"
@@ -61,9 +60,12 @@ class TestReview(unittest.TestCase):
         self.assertNotEqual(first_updated, second_updated)
 
     def test_to_dict(self):
-        '''check if to_dict returns a dictionary, if add a class
+        '''
+        check if to_dict returns a dictionary, if add a class
         key with class name of the object and if updated_at and
-        created_at are converted to string object in ISO format.'''
+        created_at are converted to string object in ISO format.
+        '''
+
         my_model3 = Review()
         my_dict_model3 = my_model3.to_dict()
         self.assertIsInstance(my_dict_model3, dict)
